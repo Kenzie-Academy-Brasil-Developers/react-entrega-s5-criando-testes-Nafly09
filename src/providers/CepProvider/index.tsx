@@ -64,7 +64,13 @@ export const LocateCepProvider = ({ children }: ILocationProps) => {
 
   return (
     <LocateCepContext.Provider
-      value={{ ceps, setCepNumber, cepNumber, handleSearch, setCeps }}
+      value={{
+        ceps,
+        setCepNumber,
+        cepNumber,
+        handleSearch,
+        setCeps,
+      }}
     >
       {children}
     </LocateCepContext.Provider>

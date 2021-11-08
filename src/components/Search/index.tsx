@@ -1,4 +1,3 @@
-import React from "react";
 import { Input, Button, Icon, Header } from "semantic-ui-react";
 import { useLocateCep } from "../../providers/CepProvider";
 
@@ -12,14 +11,17 @@ const Search = () => {
       </Header>
       <div className="Search">
         <Input
-          type="number"
+          name="CEP"
           placeholder="Insira o CEP"
           onChange={(event) => setCepNumber(event.target.value)}
         />
         <Button
+          name="submit"
           primary
           disabled={!cepNumber}
-          onClick={() => handleSearch(cepNumber)}
+          onClick={() => {
+            handleSearch(cepNumber);
+          }}
         >
           <Icon name="search" />
           Buscar pelo CEP
